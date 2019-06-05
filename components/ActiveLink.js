@@ -2,9 +2,9 @@ import { withRouter } from "next/router"
 import { Button } from "shards-react"
 
 function ActiveLink({ router, href, children }) {
-  ;(function prefetchPages() {
-    router.prefetch(router.pathname)
-  })()
+  // ;(function prefetchPages() {
+  //   router.prefetch(router.pathname)
+  // })()
 
   function handleClick(e) {
     e.preventDefault()
