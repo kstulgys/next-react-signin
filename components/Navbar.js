@@ -1,13 +1,19 @@
-import ActiveLink from "./ActiveLink"
+import ActiveLink from "./ActiveLink";
 
 const NavBar = () => (
-  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <nav className="navbar">
     <ActiveLink href="/">NextConnect</ActiveLink>
+
     <div className="d-flex">
-      <ActiveLink href="/profile">Profile</ActiveLink>
-      <ActiveLink href="/signin">Signin</ActiveLink>
+      <span>
+        <ActiveLink href="/profile">Profile</ActiveLink>
+      </span>
+
+      <span className="ml-2">
+        <ActiveLink href="/signin">Signin</ActiveLink>
+      </span>
     </div>
   </nav>
-)
+);
 
-export default NavBar
+export default NavBar;

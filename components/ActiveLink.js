@@ -1,19 +1,23 @@
-import { withRouter } from "next/router"
-import { Button } from "shards-react"
+import { withRouter } from "next/router";
+import { Button } from "shards-react";
+import { useEffect } from "react";
 
 function ActiveLink({ router, href, children }) {
   // ;(function prefetchPages() {
   //   router.prefetch(router.pathname)
   // })()
+  useEffect(() => {
+    router.prefetch("/signin");
+  });
 
   function handleClick(e) {
-    e.preventDefault()
-    router.push(href)
+    e.preventDefault();
+    router.push(href);
   }
 
-  const isCurrentPath = router.pathname === href || router.asPath === href
+  const isCurrentPath = router.pathname === href || router.asPath === href;
 
-  console.log(router.pathname, href)
+  console.log(router.pathname, href);
   return (
     <Button
       theme="dark"
@@ -22,7 +26,7 @@ function ActiveLink({ router, href, children }) {
     >
       {children}
     </Button>
-  )
+  );
 }
 
-export default withRouter(ActiveLink)
+export default withRouter(ActiveLink);
