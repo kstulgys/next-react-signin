@@ -44,7 +44,7 @@ app.prepare().then(() => {
       res.cookie("token", userData, COOKIE_OPTIONS)
       res.json(userData)
     } catch (e) {
-      return res.sendStatus(403)
+      return res.status(403).send('invalid email or password')
     }
   })
 

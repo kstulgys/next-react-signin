@@ -6,11 +6,17 @@ import { loginUser } from "../lib/auth"
 export default function SignIn() {
   const [email, setEmail] = useState("Shanna@melissa.tv")
   const [password, setPwd] = useState("anastasia.net")
+  const [errorMessage, setError] = useState("")
+
 
   function handleSubmit(e) {
     e.preventDefault()
+    setError("")
     loginUser({ email, password }).then(() => {
       Router.push("/profile")
+    }).catch(err => {
+      const error = err.response && err.response.data || err.message
+      setError(error)
     })
   }
 
@@ -18,6 +24,7 @@ export default function SignIn() {
     <form className="min-vh-100" onSubmit={handleSubmit}>
       <div class="row mt-5">
         <div class="col-12 col-md-8 col-lg-7 col-xl-5 text-left">
+          <p>{errorMessage}</p>
           <div class="row">
             <div class="col">
               <h1 className="font-weight-bold">Sign In</h1>
