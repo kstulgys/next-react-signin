@@ -1,14 +1,17 @@
-import Link from "next/link";
-import { useState } from "react";
-import { loginUser } from "../lib/auth";
+import Link from "next/link"
+import Router from "next/router"
+import { useState } from "react"
+import { loginUser } from "../lib/auth"
 
 export default function SignIn() {
-  const [email, setEmail] = useState("");
-  const [password, setPwd] = useState("");
+  const [email, setEmail] = useState("Shanna@melissa.tv")
+  const [password, setPwd] = useState("anastasia.net")
 
   function handleSubmit(e) {
-    e.preventDefault();
-    loginUser({ email, password });
+    e.preventDefault()
+    loginUser({ email, password }).then(() => {
+      Router.push("/profile")
+    })
   }
 
   return (
@@ -31,6 +34,7 @@ export default function SignIn() {
                 type="text"
                 class="form-control"
                 placeholder="Email"
+                value={email}
               />
             </div>
           </div>
@@ -41,6 +45,7 @@ export default function SignIn() {
                 class="form-control"
                 placeholder="Password"
                 onChange={e => setPwd(e.target.value)}
+                value={password}
               />
             </div>
           </div>
@@ -59,5 +64,5 @@ export default function SignIn() {
         </div>
       </div>
     </form>
-  );
+  )
 }

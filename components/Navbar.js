@@ -1,4 +1,4 @@
-import ActiveLink from "./ActiveLink";
+import ActiveLink from "./ActiveLink"
 
 const NavBar = () => (
   <nav className="navbar">
@@ -14,6 +14,6 @@ const NavBar = () => (
       </span>
     </div>
   </nav>
-);
+)
 
-export default NavBar;
+export default NavBar
