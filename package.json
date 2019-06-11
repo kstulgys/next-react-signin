@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon server.js",
+    "start": "NODE_ENV=production node server.js",
     "build": "next build",
-    "export": "next export",
-    "deploy": "yarn build && yarn export"
+    "deploy": "now --public"
   },
   "dependencies": {
     "@zeit/next-css": "1.0.1",
