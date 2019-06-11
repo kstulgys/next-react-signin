@@ -6,9 +6,9 @@ function ActiveLink({ router, href, children }) {
   // ;(function prefetchPages() {
   //   router.prefetch(router.pathname)
   // })()
-  useEffect(() => {
-    router.prefetch("/signin")
-  })
+  // useEffect(() => {
+  //   router.prefetch("/signin")
+  // })
 
   function handleClick(e) {
     e.preventDefault()
@@ -21,8 +21,7 @@ function ActiveLink({ router, href, children }) {
     <Button
       theme="dark"
       outline={isCurrentPath ? false : true}
-      onClick={handleClick}
-    >
+      onClick={handleClick}>
       {children}
     </Button>
   )

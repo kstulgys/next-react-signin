@@ -7,17 +7,21 @@ export default function SignIn() {
   const [email, setEmail] = useState("Shanna@melissa.tv")
   const [password, setPwd] = useState("anastasia.net")
   const [errorMessage, setError] = useState("")
-
+  const [isLoading, setLoading] = useState(false)
 
   function handleSubmit(e) {
     e.preventDefault()
     setError("")
-    loginUser({ email, password }).then(() => {
-      Router.push("/profile")
-    }).catch(err => {
-      const error = err.response && err.response.data || err.message
-      setError(error)
-    })
+    setLoading(true)
+    loginUser({ email, password })
+      .then(() => {
+        Router.push("/profile")
+      })
+      .catch(err => {
+        const error = (err.response && err.response.data) || err.message
+        setError(error)
+        setLoading(false)
+      })
   }
 
   return (
@@ -63,8 +67,10 @@ export default function SignIn() {
           </div>
           <div class="row mt-4">
             <div class="col">
-              <button class="btn btn-danger" type="submit">
-                <span className="font-weight-bold">Submit</span>
+              <button class="btn btn-dark" type="submit" disabled={isLoading}>
+                <span className="font-weight-bold">
+                  {isLoading ? "Sending..." : "Submit"}
+                </span>
               </button>
             </div>
           </div>

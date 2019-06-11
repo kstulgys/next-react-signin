@@ -6671,7 +6671,7 @@ function connect(options) {
       error.name = err.name;
       error.stack = err.stack; // __NEXT_DIST_DIR is provided by webpack
 
-      source_map_support_1.rewriteStacktrace(error, "/home/karolis/dev-projects/next-react-signin/.next");
+      source_map_support_1.rewriteStacktrace(error, "C:\\Users\\karolis.stulgys\\Desktop\\Desktop\\Karolis_Stulgys\\dev-projects\\next-react-signin\\.next");
       return error;
     }
   };

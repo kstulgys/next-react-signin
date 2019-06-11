@@ -9,5 +9,9 @@ export default function Profile() {
     getUserProfile().then(u => setUser(u))
   }, [])
 
-  return <pre>{JSON.stringify(user, null, 2)}</pre>
+  return (
+    <div className="d-flex justify-content-center mt-5">
+      <pre>{JSON.stringify(user, null, 2)}</pre>
+    </div>
+  )
 }

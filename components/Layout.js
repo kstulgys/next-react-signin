@@ -1,7 +1,10 @@
-export default function Layout({ children }) {
+import Navbar from "./Navbar"
+
+export default function Layout({ children, auth }) {
   return (
     <div>
-      <div className="container">{children}</div>
+      <Navbar auth={auth} />
+      <div className="container min-vh-100">{children}</div>
     </div>
-  );
+  )
 }

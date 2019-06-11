@@ -44,7 +44,7 @@ app.prepare().then(() => {
       res.cookie("token", userData, COOKIE_OPTIONS)
       res.json(userData)
     } catch (e) {
-      return res.status(403).send('invalid email or password')
+      return res.status(403).send("invalid email or password")
     }
   })
 
@@ -59,6 +59,11 @@ app.prepare().then(() => {
       return res.json({ user: userProfile })
     }
     res.sendStatus(404)
+  })
+
+  server.post("/api/signout", async (req, res) => {
+    res.clearCookie("token", COOKIE_OPTIONS)
+    res.sendStatus(204)
   })
 
   server.get("*", (req, res) => {
