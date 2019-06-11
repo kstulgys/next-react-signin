@@ -1,27 +1,44 @@
 {
-  "devFiles": [
-    "static/development/dll/dll_aa8f31c0c93a8f34edc5.js"
-  ],
+  "devFiles": [],
   "pages": {
+    "/": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
+    ],
     "/_app": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/css/styles.c850de82.chunk.css",
+      "static/chunks/styles.df8846755074fb28b77a.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
     ],
     "/_error": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
+    ],
+    "/about": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
+    ],
+    "/index": [
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
     ],
     "/profile": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
     ],
     "/signin": [
-      "static/runtime/webpack.js",
-      "static/css/styles.chunk.css",
-      "static/chunks/styles.js",
-      "static/runtime/main.js"
+      "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.b99d480451631541f793.js",
+      "static/css/styles.c850de82.chunk.css",
+      "static/chunks/styles.df8846755074fb28b77a.js",
+      "static/runtime/main-aaf1541444c7e3a662c9.js"
     ]
   }
 }
